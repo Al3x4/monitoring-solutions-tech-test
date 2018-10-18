@@ -2,9 +2,13 @@ import	React from 'react'
 
 const Movie = ({movie}) => {
 
-	// Extract the release year and runtime from the description with a regular expression.
-	let yearAndDuration = movie.description.match(/\(([^)]+)\)/g);
-	yearAndDuration.forEach(match => match.substring(1, match.length - 1));
+	// Extract the release year and runtime from the description with a regular expression and save them in another array
+	let yearAndDurationWithPara = movie.description.match(/\(([^)]+)\)/g);
+	let yearAndDuration = [];
+	yearAndDurationWithPara.map(data => {yearAndDuration.push(data.slice(1, data.length-1))})
+	let description = movie.description.replace(/\((.*)\)/g, '').trimEnd();
+
+
 
 
 	return (
@@ -13,7 +17,7 @@ const Movie = ({movie}) => {
 	        <h2 className="movie-name">{movie.name}</h2>
 	        <div className="movie-release">{yearAndDuration[0]}</div>
 	        <div className="movie-duration">{yearAndDuration[1]}</div>
-	        <div className="movie-description">{movie.description}</div>
+	        <div className="movie-description">{description}</div>
 	        <div className="movie-footer">              
 	        	<div className="movie-totalViews">{movie.skygoTotalViews}</div>
 	        	<div className="movie-provider">{movie.provider}</div>
