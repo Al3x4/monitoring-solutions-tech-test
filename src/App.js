@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import { Route, Link } from 'react-router-dom'
+import './App.css'
 
 import Movie from './components/Movie'
 
+const baseUrl = process.env.PUBLIC_URL
+
 class App extends Component {
   state = {
-    movieData : []
+    movieData : [],
+    isHome : true
   }
 
   fetchMovieData = () => {
@@ -23,13 +27,32 @@ class App extends Component {
       <div className="App">
         <aside>
           <ul>
-            <li className="selected"><a href="">Movies</a></li>
-            <li><a href="">Timeline</a></li>
+            <li>
+              <Link 
+                to={baseUrl + '/'}
+              >
+                Movies
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to={baseUrl + 'timeline'}>
+                Timeline
+              </Link>
+            </li>
           </ul>
         </aside>
 
         <main>
-          {this.state.movieData.map(movie => <Movie key={movie.name} movie={movie} />)}
+          <Route 
+            exact path={baseUrl + '/'}
+            render={() => this.state.movieData.map(movie => <Movie key={movie.name} movie={movie} />)}
+          />
+
+          <Route 
+            exact path={baseUrl + '/timeline'}
+            render={() => <h1>DOES THIS EVEN WORK? YES</h1>}
+          />
         </main>
 
       </div>

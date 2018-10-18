@@ -23,15 +23,44 @@ aside {
   letter-spacing: 1px;
 }
 
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  height: 50px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+li:hover {
+  padding-left: 15px;
+  background: #1F2B37;
+}
+
 .movie {
   width: 29%;
   max-width: 500px;
   margin: 2%;
 }
 
+
 .movie-assetImage img {
   max-width: 100%;
 }
+
+
 
 @media screen and (max-width: 900px) {
   .movie {
