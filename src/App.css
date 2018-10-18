@@ -9,7 +9,18 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 10vw;
+  margin: 0 2vw 0;
+  margin-left: calc(300px + 2vw);
+}
+
+aside {
+  width: 300px;
+  height: 100%;
+  background: #34495e;
+  color: #ffffff;
+  position: fixed;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .movie {
@@ -21,11 +32,6 @@ main {
 .movie-assetImage img {
   max-width: 100%;
 }
-
-.movie-duration {
-  float: right;
-}
-
 
 @media screen and (max-width: 900px) {
   .movie {
