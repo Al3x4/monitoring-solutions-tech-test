@@ -9,13 +9,20 @@ const baseUrl = process.env.PUBLIC_URL
 class App extends Component {
   state = {
     movieData : [],
+    timeData : [],
     isHome : true
   }
 
   fetchMovieData = () => {
     fetch('https://my-json-server.typicode.com/sky-uk/monitoring-tech-test/assets')
     .then(response => response.json())
-    .then(movieData => this.setState({movieData : movieData}));
+    .then(movieData => this.setState({movieData}));
+  }
+
+  fetchTimestampData = () => {
+    fetch('https://my-json-server.typicode.com/sky-uk/monitoring-tech-test/data')
+    .then(response => response.json())
+    .then(timeData => this.setState({timeData}));
   }
 
   componentDidMount() {
@@ -42,13 +49,11 @@ class App extends Component {
             </li>
           </ul>
         </aside>
-
         <main>
           <Route 
             exact path={baseUrl + '/'}
             render={() => this.state.movieData.map(movie => <Movie key={movie.name} movie={movie} />)}
           />
-
           <Route 
             exact path={baseUrl + '/timeline'}
             render={() => <h1>DOES THIS EVEN WORK? YES</h1>}

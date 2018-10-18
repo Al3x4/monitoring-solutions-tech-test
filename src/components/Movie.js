@@ -8,9 +8,6 @@ const Movie = ({movie}) => {
 	yearAndDurationWithPara.map(data => {yearAndDuration.push(data.slice(1, data.length-1))})
 	let description = movie.description.replace(/\((.*)\)/g, '').trimEnd();
 
-
-
-
 	return (
 		<div className="movie">
 	        <div className="movie-assetImage"><img src={movie.assetImage} alt={movie.name}/></div>
