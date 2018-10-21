@@ -69,7 +69,7 @@ class App extends Component {
         <main>
           <Route 
             exact path={baseUrl + '/'}
-            render={() => this.state.movieData.map(movie => <Movie key={movie.name} movie={movie} />)}
+            render={() => this.state.movieData.map(movie => <Movie key={movie.name} movie={movie}/>)}
           />
           <Route 
             exact path={baseUrl + '/timeline'}

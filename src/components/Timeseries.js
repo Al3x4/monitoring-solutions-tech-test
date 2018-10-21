@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 import { LineChart, CartesianGrid, Line, Tooltip, XAxis, YAxis, ResponsiveContainer} from 'recharts'
 
 class Timeseries extends Component{
-
-
-
-
 	render() {
 		return (
 			<ResponsiveContainer
