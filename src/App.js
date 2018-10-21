@@ -47,22 +47,21 @@ class App extends Component {
     this.fetchTimestampData();
   }
 
-  showMenu(){
-    let button = document.querySelector('.hamburger')
+  handleClick(){
     document.querySelector('aside').classList.toggle('open')
-    button.classList.toggle('move')
   }
 
   render() {
     return (
       <div className="App">
-          <div className="hamburger" onClick={this.showMenu}>
+          <div className="hamburger" onClick={this.handleClick}>
             <div className="hamburger-line"></div>
             <div className="hamburger-line"></div>
             <div className="hamburger-line"></div>
           </div>
         <aside>
           <Link
+                onClick={this.handleClick}
                 className="link" 
                 to={baseUrl + '/'}
               >
@@ -70,6 +69,7 @@ class App extends Component {
               </Link>
            
               <Link
+                  onClick={this.handleClick}
                 className="link" 
                 to={baseUrl + 'timeline'}>
                 Timeline
