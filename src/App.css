@@ -1,6 +1,6 @@
 body {
-  color:white;
-  background-color: #1d1c1f;
+  background-color: #f2f5f7;
+  color: #676c79;
   font-family: sans-serif;
   font-size: 13px;
 }
@@ -8,16 +8,16 @@ body {
 main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
   margin: 0 2vw 0;
-  margin-left: calc(300px + 2vw);
+  margin-left: calc(200px + 2vw);
 }
 
 aside {
-  width: 300px;
+  width: 220px;
   height: 100%;
-  background: #34495e;
-  color: #ffffff;
+  background: #ffffff;
+  color: #676c79;
   position: fixed;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -25,8 +25,7 @@ aside {
 
 a {
   text-decoration: none;
-  color: #ffffff;
-  font-size: 18px;
+  color: #44a2d2;
 }
 
 ul {
@@ -45,24 +44,61 @@ li {
 }
 
 li:hover {
-  padding-left: 15px;
+  padding-left: 35px;
   background: #1F2B37;
 }
 
 .movie {
   width: 29%;
-  max-width: 500px;
+  max-width: 350px;
   margin: 2%;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
+.movie-info {
+  padding: 0 5px 20px 20px;
+}
 
 .movie-assetImage img {
   max-width: 100%;
 }
 
+.movie-name {
+  color: #3b4248;
+  font-size: 1.1rem;
+}
+
+.movie-info {
+  color: #6c787d;
+  font-size: 0.8rem;
+}
+
+.movie-figures {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.figure {
+  display: inline-block;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  text-align: center;
+  color: #0074af;
+}
+
+.figure-legend {
+  font-size: 0.65rem;
+  display: block;
+  color: #6c787d;
+  vertical-align: inherit;
+
+}
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
   .movie {
     width: 46%;
   }
