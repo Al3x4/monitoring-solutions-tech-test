@@ -6,10 +6,10 @@ class Timeseries extends Component{
 		return (
 			<ResponsiveContainer
 				width="100%"
-				height={500}
+				height={300}
 			>
 				<LineChart data={this.props.data}
-				  margin={{ top: 30, right: 30, left: 20, bottom: 5 }}>
+				  margin={{ top: 30, right: 30, left: 0, bottom: 5 }}>
 				  <CartesianGrid strokeDasharray="3 3" vertical={false}/>
 				  <XAxis 
 				  	dataKey="timestamp" 

@@ -8,7 +8,6 @@ body {
 main {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: space-between;*/
   margin: 0 2vw 0;
   margin-left: calc(200px + 2vw);
 }
@@ -33,7 +32,7 @@ ul {
   padding: 0;
 }
 
-li {
+.link {
   list-style: none;
   height: 50px;
   padding-left: 20px;
@@ -43,7 +42,7 @@ li {
   transition: all 0.5s;
 }
 
-li:hover {
+.link:hover {
   padding-left: 35px;
   background: #1F2B37;
 }
@@ -55,10 +54,15 @@ li:hover {
   background: #ffffff;
   overflow: hidden;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .movie-info {
-  padding: 0 5px 20px 20px;
+  padding: 0 20px;
+  color: #6c787d;
+  font-size: 0.8rem;
 }
 
 .movie-assetImage img {
@@ -70,23 +74,27 @@ li:hover {
   font-size: 1.1rem;
 }
 
-.movie-info {
-  color: #6c787d;
-  font-size: 0.8rem;
-}
-
 .movie-figures {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 10px 0;
 }
 
 .figure {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   vertical-align: middle;
   text-align: center;
-  color: #0074af;
+  color: #36596b;
+}
+
+.sky {
+  color: #0088fe;
+}
+
+.now {
+  color: #00c49f;
 }
 
 .figure-legend {
@@ -95,6 +103,28 @@ li:hover {
   color: #6c787d;
   vertical-align: inherit;
 
+}
+
+.views-pie {
+  margin: 0 -15px;
+}
+
+.separator {
+  border-top: 1px solid #8b999f;
+  border-bottom: 1px solid #ffffff;
+  margin: 25px 20px -5px;
+}
+
+.graph-container {
+  width: 100%;
+}
+
+.graph{
+  width: 90%;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 

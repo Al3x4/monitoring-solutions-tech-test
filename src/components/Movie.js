@@ -27,23 +27,27 @@ const Movie = ({movie}) => {
 
 	return (
 		<div className="movie">
-	        <div className="movie-assetImage">
-	        	<img src={movie.assetImage} alt={movie.name}/>
-	        </div>
+			<div>
+				<div className="movie-assetImage">
+		        	<img src={movie.assetImage} alt={movie.name}/>
+		        </div>
+		        <div className="movie-info">
+			        <h2 className="movie-name">{movie.name}</h2>
+			        <p className="movie-description">{description}</p>	         	  
+		        </div>
+			</div>
 	        <div className="movie-info">
-		        <h2 className="movie-name">{movie.name}</h2>
-		        <p className="movie-description">{description}</p>
-		        <hr className="separator"/>
 		        <div className="movie-figures">
 		        	<span className="figure movie-year">{yearAndDuration[0]}<span className="figure-legend">Release year</span></span>
 		        	<span className="figure movie-runtime">{yearAndDuration[1]}<span className="figure-legend">Minutes</span> </span>
 		        	<span className="figure movie-views">{movie.skygoTotalViews + movie.nowtvTotalViews}<span className="figure-legend">Total views</span></span>
-		        	<ViewsPieChart data={views} />	
 		        </div>
-
-
-
-		        	  
+		        <hr className="separator"/>
+		        <div className="movie-figures">
+		        	<span className="figure movie-views sky">{movie.skygoTotalViews}<span className="figure-legend">Sky Go views</span></span>
+		        	<span className="figure movie-views now">{movie.nowtvTotalViews}<span className="figure-legend">Now TV views</span></span>
+		        	<ViewsPieChart data={views} />
+		        </div>		         	  
 	        </div>             	
 	    </div>
 	)

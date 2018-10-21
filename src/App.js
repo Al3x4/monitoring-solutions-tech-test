@@ -4,8 +4,8 @@ import moment from 'moment'
 import './App.css'
 
 import Movie from './components/Movie'
-import Timeseries from './components/Timeseries'
-import ViewsStackedBarChart from './components/ViewsStackedBarChart'
+import AllGraphs from './components/AllGraphs'
+
 
 
 const baseUrl = process.env.PUBLIC_URL
@@ -34,7 +34,7 @@ class App extends Component {
 
     dataArray.map(datum => {
       formattedData.push({
-        timestamp: moment(datum.timestamp).format('LTS D MMM'),
+        timestamp: moment(datum.timestamp).format('LTS'),
         value:  datum.value
       })
     })
@@ -51,21 +51,19 @@ class App extends Component {
     return (
       <div className="App">
         <aside>
-          <ul>
-            <li>
-              <Link 
+          <Link
+                className="link" 
                 to={baseUrl + '/'}
               >
                 Movies
               </Link>
-            </li>
-            <li>
-              <Link 
+           
+              <Link
+                className="link" 
                 to={baseUrl + 'timeline'}>
                 Timeline
               </Link>
-            </li>
-          </ul>
+          
         </aside>
         <main>
           <Route 
@@ -74,7 +72,7 @@ class App extends Component {
           />
           <Route 
             exact path={baseUrl + '/timeline'}
-            render={() => <ViewsStackedBarChart data={this.state.movieData}/>}
+            render={() => <AllGraphs movieData={this.state.movieData} timeData={this.state.timeData}/>}
           />
         </main>
 

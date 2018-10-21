@@ -1,5 +1,5 @@
 import React from 'react'
-import { BarChart, Bar, ResponsiveContainer, XAxis, Legend} from 'recharts'
+import { BarChart, Bar, ResponsiveContainer, XAxis, Tooltip, Legend} from 'recharts'
 
 const ViewsStackedBarChart = ({data}) => {
 	return (
@@ -9,8 +9,10 @@ const ViewsStackedBarChart = ({data}) => {
 		>
 			<BarChart width={200} height={200} data={data}>		
 				<XAxis dataKey="name"/>
-		     	<Bar dataKey="skygoTotalViews" stackId="a" fill="#8884d8" />
-		     	<Bar dataKey="nowtvTotalViews" stackId="a" fill="#82ca9d" />
+				<Tooltip isAnimationActive={false}/>
+		     	<Bar dataKey="skygoTotalViews" stackId="a" fill="#8884d8" maxBarSize={50} />
+		     	<Bar dataKey="nowtvTotalViews" stackId="a" fill="#82ca9d" maxBarSize={50} />
+
 		     	<Legend />
 		    </BarChart>
 		</ResponsiveContainer>
