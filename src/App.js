@@ -47,9 +47,20 @@ class App extends Component {
     this.fetchTimestampData();
   }
 
+  showMenu(){
+    let button = document.querySelector('.hamburger')
+    document.querySelector('aside').classList.toggle('open')
+    button.classList.toggle('move')
+  }
+
   render() {
     return (
       <div className="App">
+          <div className="hamburger" onClick={this.showMenu}>
+            <div className="hamburger-line"></div>
+            <div className="hamburger-line"></div>
+            <div className="hamburger-line"></div>
+          </div>
         <aside>
           <Link
                 className="link" 

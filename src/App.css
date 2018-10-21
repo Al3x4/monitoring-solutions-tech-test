@@ -20,16 +20,16 @@ aside {
   position: fixed;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: all 0.5s;
 }
 
 a {
   text-decoration: none;
-  color: #44a2d2;
+  color: #676c79;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+.hamburger {
+  display: none;
 }
 
 .link {
@@ -40,11 +40,14 @@ ul {
   flex-direction: column;
   justify-content: center;
   transition: all 0.5s;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .link:hover {
   padding-left: 35px;
   background: #1F2B37;
+  color: #8b999f;
 }
 
 .movie {
@@ -134,8 +137,48 @@ ul {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+  main {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  aside {
+    position: absolute;
+    left: -220px;
+    padding-top: 70px;
+    z-index: 5;
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 6px;
+    z-index: 6;
+    background: #ffffff;
+    border-radius: 5px;
+  }
+
+  .hamburger:hover {
+    background: #fbf8f8;
+  }
+
+  .hamburger-line {
+    height: 4px;
+    width: 32px;
+    margin: 5px;
+    border-radius: 2px;
+    background: #676c79;
+  }
+
+  .open {
+    left: 0;
+  }
+
   .movie {
-    width: 96%;
+    width: 100%;
   }
 }
