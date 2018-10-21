@@ -5,6 +5,7 @@ import './App.css'
 
 import Movie from './components/Movie'
 import Timeseries from './components/Timeseries'
+import ViewsStackedBarChart from './components/ViewsStackedBarChart'
 
 
 const baseUrl = process.env.PUBLIC_URL
@@ -73,7 +74,7 @@ class App extends Component {
           />
           <Route 
             exact path={baseUrl + '/timeline'}
-            render={() => <Timeseries data={this.state.timeData}/>}
+            render={() => <ViewsStackedBarChart data={this.state.movieData}/>}
           />
         </main>
 
