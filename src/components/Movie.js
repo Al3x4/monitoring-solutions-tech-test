@@ -1,5 +1,4 @@
 import	React from 'react'
-import ViewBar from './ViewBar'
 
 const Movie = ({movie}) => {
 
@@ -22,7 +21,6 @@ const Movie = ({movie}) => {
 	        <div className="movie-release">{yearAndDuration[0]}</div>
 	        <div className="movie-duration">{yearAndDuration[1]}</div>
 	        <div className="movie-description">{description}</div>
-	        <ViewBar data={views} />
 	        <div className="movie-footer">              
 	        	<div className="movie-totalViews">{movie.skygoTotalViews}</div>
 	        	<div className="movie-provider">{movie.provider}</div>
