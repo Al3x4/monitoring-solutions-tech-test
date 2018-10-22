@@ -21,4 +21,4 @@ This is a 2-page web application that displays data from the 2 APIs provided. Th
 * Add additional comments to explain the code better
 
 ## create-react-app
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and uses React Ruoter DOM and Recharts.
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and uses React Router DOM and Recharts.
