@@ -13,7 +13,7 @@ This is a 2-page web application that displays data from the 2 APIs provided. Th
 * Use `npm start` to run the app locally
 * Navigate to `localhost:3000`
 
-##Additional tweaks and features that can be implemented: 
+## Additional tweaks and features that can be implemented: 
 * Error handling
 * Styling according to brand guidelines
 * Display percentages for pie charts on the first page
